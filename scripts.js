@@ -1,4 +1,4 @@
-const scriptUrl = 'https://script.google.com/macros/s/AKfycbyaa-d0c8rPvO9aUEtKfrUelgX2raICyaGz8W_0HSazgpuMuuK484eUTzZynAb_nQzCNA/exec';  // Replace with your Google Apps Script web app URL
+const scriptUrl = 'https://script.google.com/macros/s/AKfycbwePGYwqyd0d4GcChinA_Hgm8YfFBLTvpKEOOyGb19mgUaFNgZe9T1o20tZeUaTW4eTKQ/exec';  // Replace with your Google Apps Script web app URL
 
 document.addEventListener("DOMContentLoaded", function() {
     loadDropdownData();
@@ -149,5 +149,21 @@ function generateName() {
     const generatedName = `${creator}-${name}-${variation}${segmentsString ? '-' + segmentsString : ''}-${offer}`;
 
     // Display the generated name
-    document.getElementById("output").innerText = generatedName;
+    const outputElement = document.getElementById("output");
+    outputElement.innerText = generatedName;
+
+    // Copy to clipboard
+    navigator.clipboard.writeText(generatedName)
+        .then(() => {
+            // Optional: Provide user feedback that the text was copied
+            console.log("Text copied to clipboard!");
+            // You could also display a brief message on the page:
+            // outputElement.classList.add("copied"); // Add a CSS class for styling
+            // setTimeout(() => outputElement.classList.remove("copied"), 2000); // Remove after 2 seconds
+        })
+        .catch(err => {
+            console.error("Failed to copy: ", err);
+            // Optional: Display an error message to the user
+            alert("Failed to copy. Please copy manually."); // Fallback for older browsers
+        });
 }

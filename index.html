@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'IBM Plex Sans Arabic', sans-serif; /* Apply the font style */
+        }
+        /* Add any other styles you need for your page here */
+    </style>
+    <title>Binrushd files Name Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2><span id = "typed-text"></span></h2>
+        <form id="name-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="variation">Variation:</label>
+            <select id="variation" name="variation" required>
+                <option value="">Select Variation</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+            
+            <label for="creator">Creator Name:</label>
+            <select id="creator" name="creator">
+                <option value="">Loading...</option>
+            </select>
+            
+            <label for="vo">VO:</label>
+            <select id="vo" name="vo">
+                <option value="">Loading...</option>
+            </select>
+            
+            <label for="designer">Designer/Editor:</label>
+            <select id="designer" name="designer">
+                <option value="">Loading...</option>
+            </select>
+            
+            <label for="photographer">Photographer:</label>
+            <select id="photographer" name="photographer">
+                <option value="">Loading...</option>
+            </select>
+            
+            <label for="offer">Offer:</label>
+            <select id="offer" name="offer" required>
+                <option value="">Select Offer</option>
+                <option value="Offer 1">Offer 1</option>
+                <option value="Offer 2">Offer 2</option>
+                <option value="Offer 3">Offer 3</option>
+                <option value="Offer 4">Offer 4</option>
+            </select>
+            
+            <button type="button" onclick="generateName()">Generate Name</button>
+        </form>
+        
+        <!-- <h3>Generated Name:</h3> -->
+        <p id="output"></p>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

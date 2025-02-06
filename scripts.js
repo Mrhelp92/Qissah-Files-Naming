@@ -1,4 +1,4 @@
-const scriptUrl = 'https://script.google.com/macros/s/AKfycbxim8Vvl3v3M9yAH0mD-Ld8xlHyAyl39UhuxT-ay2oizk8UUFLsDdo7MggdngYeUzv83g/exec';  // Replace with your Google Apps Script web app URL
+const scriptUrl = 'AKfycbyaa-d0c8rPvO9aUEtKfrUelgX2raICyaGz8W_0HSazgpuMuuK484eUTzZynAb_nQzCNA';  // Replace with your Google Apps Script web app URL
 
 document.addEventListener("DOMContentLoaded", function() {
     loadDropdownData();
